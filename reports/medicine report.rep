@@ -1,0 +1,95 @@
+PL/SQL Developer Report
+
+[SQL]
+select m.name "Medicine Name", 
+       b.time "Time Purchased", 
+       b.patientid "Patient Id", 
+       m.quantity "Remaining Quantitiy"
+from buying_medicine b, pharmacist ph , medicine m
+where  b.pharmid = ph.id and b.medicine_name = m.name
+       and ph.name = &<name = "pharmacist name" type = String>
+       and b.time between &<name = "start time" type = date>
+       and &<name = "end time" type = date>
+order by &<name = "order by" 
+            list ="Medicine Name, Time Purchased"
+            type ="String">
+
+[Options]
+Connect=False
+Username=
+Password=2456
+Database=
+ConnectAs=
+LockMode=0
+LockedPassword=2854
+BkgColor=-16777211
+BkgImage=
+FormLayout=False
+OnlyNBSP=False
+LeftMargin=0
+TopMargin=0
+PageBreak=0
+AddSQL=False
+HandleTags=True
+
+[Styles]
+
+{Title}
+Enabled=True
+Name=Report Title
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Param}
+Enabled=True
+Name=Variables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Table}
+Enabled=False
+Name=Tabular Tables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Form}
+Enabled=False
+Name=Form Tables
+Description=
+Style=
+HeaderStyle=
+Align=3
+Break=0
+Function=0
+Format=
+
+{Field}
+Enabled=False
+Name=Default Field
+Description=
+Style=
+HeaderStyle=
+Align=3
+Break=0
+Function=0
+Format=
+
+
+
+[CSS]
+

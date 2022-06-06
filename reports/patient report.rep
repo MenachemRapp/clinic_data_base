@@ -1,0 +1,95 @@
+PL/SQL Developer Report
+
+[SQL]
+select t.time "Time & Date",
+       t.duration "Minutes",
+       t.building_id "#Building",
+       t.room_number "#Room",
+       m.name "Attentandt Name"
+from TREATMENT t, medical_attendant m ,patient p
+where  t.attendantid = m.id and t.patientid = p.id 
+       and p.name = &<name = "patient name" type = String>
+       and t.time between &<name = "start time" type = date>
+       and &<name = "end time" type = date>
+
+order by t.time
+
+[Options]
+Connect=False
+Username=
+Password=2681
+Database=
+ConnectAs=
+LockMode=0
+LockedPassword=2628
+BkgColor=-16777211
+BkgImage=
+FormLayout=False
+OnlyNBSP=False
+LeftMargin=0
+TopMargin=0
+PageBreak=0
+AddSQL=False
+HandleTags=True
+
+[Styles]
+
+{Title}
+Enabled=True
+Name=Report Title
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Param}
+Enabled=True
+Name=Variables
+Description=
+Style=
+HeaderStyle=
+Align=0
+Break=0
+Function=0
+Format=
+
+{Table}
+Enabled=False
+Name=Tabular Tables
+Description=
+Style=
+HeaderStyle=
+Align=3
+Break=0
+Function=0
+Format=
+
+{Form}
+Enabled=False
+Name=Form Tables
+Description=
+Style=
+HeaderStyle=
+Align=3
+Break=0
+Function=0
+Format=
+
+{Field}
+Enabled=False
+Name=Default Field
+Description=
+Style=
+HeaderStyle=
+Align=3
+Break=0
+Function=0
+Format=
+
+
+
+[CSS]
+
